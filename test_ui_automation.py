@@ -19,6 +19,7 @@ class TestAutomation():
             chrome_driver_path = r"C:\\seleniumdriver\\chromedriver.exe"
             driver = webdriver.Chrome(executable_path=chrome_driver_path, chrome_options=options)
             driver.maximize_window()
+            return driver
         except Exception as e:
             print(e+"Unable to lunch browser")
 

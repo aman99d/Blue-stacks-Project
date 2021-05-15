@@ -243,12 +243,9 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 10-May-2021 at 00:21:30 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 15-May-2021 at 15:41:32 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
-      <tr>
-        <td>JAVA_HOME</td>
-        <td>C:\Program Files\Java\jdk-11.0.2</td></tr>
       <tr>
         <td>Packages</td>
         <td>{"pluggy": "0.13.1", "py": "1.10.0", "pytest": "6.2.4"}</td></tr>
@@ -257,13 +254,13 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Windows-10-10.0.19041-SP0</td></tr>
       <tr>
         <td>Plugins</td>
-        <td>{"allure-pytest": "2.7.0", "bdd": "3.1.0", "forked": "1.3.0", "html": "3.1.1", "metadata": "1.11.0", "parallel": "0.0.9", "xdist": "1.28.0"}</td></tr>
+        <td>{"html": "3.1.1", "metadata": "1.11.0"}</td></tr>
       <tr>
         <td>Python</td>
-        <td>3.7.3</td></tr></table>
+        <td>3.7.0</td></tr></table>
     <h2>Summary</h2>
-    <p>5 tests ran in 39.09 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">5 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>7 tests ran in 35.80 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">6 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -274,11 +271,21 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_ui_automation.py::TestAutomation::test_weather</td>
+          <td class="col-duration">0.46</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;test_ui_automation.TestAutomation object at 0x0000021E28B42668&gt;<br/><br/>    def test_weather(self):<br/>        try:<br/>            int_weather=Weather.test_call_weather(self)<br/>            print(int_weather)<br/>            if str(int_weather)==str(str_temp):<br/>                assert True<br/>            else:<br/>&gt;               assert False<br/><span class="error">E               AssertionError: assert False</span><br/><br/>test_ui_automation.py:68: AssertionError<br/><br/>During handling of the above exception, another exception occurred:<br/><br/>self = &lt;test_ui_automation.TestAutomation object at 0x0000021E28B42668&gt;<br/><br/>    def test_weather(self):<br/>        try:<br/>            int_weather=Weather.test_call_weather(self)<br/>            print(int_weather)<br/>            if str(int_weather)==str(str_temp):<br/>                assert True<br/>            else:<br/>                assert False<br/>        except Exception as e:<br/>&gt;           print(e+ &quot;Match the difference between UI and API&quot;)<br/><span class="error">E           TypeError: unsupported operand type(s) for +: &#x27;AssertionError&#x27; and &#x27;str&#x27;</span><br/><br/>test_ui_automation.py:70: TypeError<br/> ------------------------------Captured stdout call------------------------------ <br/>31
+<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_ui_automation.py::TestAutomation::test_start</td>
-          <td class="col-duration">10.51</td>
+          <td class="col-duration">10.20</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -287,7 +294,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_ui_automation.py::TestAutomation::test_navigate_to_url</td>
-          <td class="col-duration">1.84</td>
+          <td class="col-duration">2.47</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -296,7 +303,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_ui_automation.py::TestAutomation::test_search_city</td>
-          <td class="col-duration">9.52</td>
+          <td class="col-duration">13.93</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -304,17 +311,27 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">test_ui_automation.py::TestAutomation::test_select_city</td>
-          <td class="col-duration">11.64</td>
+          <td class="col-name">test_ui_automation.py::TestAutomation::test_city</td>
+          <td class="col-duration">3.40</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_ui_automation.py::TestAutomation::test_tempature</td>
+          <td class="col-duration">0.28</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>38
+<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_ui_automation.py::TestAutomation::test_close</td>
-          <td class="col-duration">4.42</td>
+          <td class="col-duration">4.46</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
