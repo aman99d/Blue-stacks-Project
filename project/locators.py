@@ -11,3 +11,5 @@ class Locators:
     otp="//*[contains(text(),'Get OTP')]"
     search_button="//*[contains(text(),'Search')]"
     filter_18="//label[text()='<text_replace>']"
+
+    booking_date="(//div[@class='vaccine-box vaccine-box1 vaccine-padding'][1]/a)[2]"

@@ -6,6 +6,7 @@ from project.locators import Locators
 from test_ui_automation import TestAutomation
 import datetime
 
+
 class Test_cowin_ui:
     print("Book Vaccine slot")
 
@@ -51,6 +52,8 @@ class Test_cowin_ui:
             print(start_time)
             for item in range(2000):
                 driver.find_element_by_xpath(self.locators.search_button).click()
+                time.sleep(0.03)
+                driver.find_element_by_xpath(self.locators.filter_18.replace("<text_replace>", "Age 18+")).click()
                 time.sleep(0.03)
                 driver.find_element_by_xpath(self.locators.filter_18.replace("<text_replace>","Covaxin")).click()
                 time.sleep(0.03)
