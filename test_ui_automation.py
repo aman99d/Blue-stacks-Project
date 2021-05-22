@@ -68,7 +68,7 @@ class TestAutomation():
             else:
                 assert False
         except Exception as e:
-            print(e+ "Error in Match the difference between UI and API")
+            print(e+ "Error in matching the difference between UI and API")
 
 
 class Weather():
