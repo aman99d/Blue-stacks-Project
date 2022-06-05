@@ -19,5 +19,6 @@ variables:
 
 parameters:
   - name: resourceType
+    value: "abc"
   
 
