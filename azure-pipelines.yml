@@ -31,33 +31,17 @@ parameters:
   displayName: Include Accessibility checks
   type: boolean
   default: false
-stages:
-- stage: Build
-  displayName: Build
-  jobs:
-  - job: Build
-    steps:
-    - script: echo running Build
 
+- name: myNumber
+  type: number
+  default: 2
+  values:
+  - 1
+  - 2
+  - 4
+  - 8
+  - 16
 
-- stage: UnitTest
-  displayName: Unit Test
-  dependsOn: Build
-  jobs:
-  - job: UnitTest
-    steps:
-    - script: echo running UnitTest
-
-
-- ${{ if eq(parameters.name, true) }}:
-  - stage: PerfTest
-    displayName: Performance Test
-    dependsOn: Build
-    jobs:
-    - job: PerfTest
-      steps:
-      - script: echo running PerfTestt
- 
 - name: configs
   type: string
   default: 'Desktop,Mobile'
