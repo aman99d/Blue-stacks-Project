@@ -31,13 +31,13 @@ parameters:
   displayName: Include Accessibility checks
   type: boolean
   default: false
-- ${{ if eq(parameters.runPerfTests, true) }}:
-  - name: PerfTest
-    displayName: Performance Test
-    jobs:
-    - job: PerfTest
-      steps:
-      - script: echo running PerfTest
+  - ${{ if eq(parameters.runPerfTests, true) }}:
+      name: PerfTest
+      displayName: Performance Test
+      jobs:
+      - job: PerfTest
+        steps:
+        - script: echo running PerfTest
  
 - name: configs
   type: string
