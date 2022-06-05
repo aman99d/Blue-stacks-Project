@@ -20,7 +20,7 @@ variables:
 
 parameters:
 - name: image
-  displayName: Pool Image
+  displayName: Environemt selection
   type: string
   default: testenv
   values:
@@ -32,15 +32,15 @@ parameters:
   type: boolean
   default: false
 
-- name: myNumber
+- name: Re-Run failed cases
   type: number
-  default: 2
+  default: 0
   values:
+  - 0
   - 1
   - 2
+  - 3
   - 4
-  - 8
-  - 16
 
 - name: configs
   type: string
