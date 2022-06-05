@@ -7,14 +7,17 @@ trigger:
 - none
 
 steps:
-- script: echo Hello, world!
+- script: echo ${{parameters.resourceType}}
   displayName: 'Run a one-line script'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
   displayName: 'Run a multi-line script'
 
-  
 variables:
-  testEnvironment: test
+- none
+
+parameters:
+  - name: resourceType
   
+
