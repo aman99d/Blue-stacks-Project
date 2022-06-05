@@ -22,8 +22,7 @@ parameters:
   - testenv
   - staging
   - production
-- name: test
-  displayName: Include Accessibility checks
+- name: Include Accessibility checks
   type: boolean
   default: false
 
