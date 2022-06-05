@@ -22,11 +22,14 @@ parameters:
 - name: image
   displayName: Pool Image
   type: string
-  default: ubuntu-latest
+  default: testenv
   values:
-  - windows-latest
-  - ubuntu-latest
-  - macOS-latest
-
+  - testenv
+  - staging
+  - production
+- name: test
+  displayName: Include Accessibility checks
+  type: boolean
+  default: false
   
 
