@@ -64,3 +64,5 @@ class Test_cowin_ui:
             print(time_elapsed)
         except Exception as e:
             print(e + "Unable to search button")
+
+

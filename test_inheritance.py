@@ -140,3 +140,24 @@ a = Employee('Rahul', 886012, 200000, "Intern")
 # calling a function of the class Person using its instance
 a.display()
 
+
+
+
+#count element in list
+vowels = ['a', 'e', 'i', 'o', 'i', 'u']
+
+#count element 'i'
+count = vowels.count('i')
+
+#print count
+print('The count of i is:', count)
+
+# Mutable vs. Immutable
+# Lists are mutable while tuples are immutable, and this marks the KEY difference between the two. But what do we mean by this?
+#
+# The answer is this: we can change/modify the values of a list but we cannot change/modify the values of a tuple.
+#
+# Since lists are mutable, we can't use a list as a key in a dictionary. This is because only an immutable object
+# can be used as a key in a dictionary. Thus, we can use tuples as dictionary keys if needed.
+#
+# Let's take a look at an example that demonstrates the difference between lists and tuple in terms of immutability.
