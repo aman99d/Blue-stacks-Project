@@ -31,9 +31,32 @@ parameters:
   displayName: Include Accessibility checks
   type: boolean
   default: false
-  - ${{ if eq(parameters.runPerfTests, true) }}:
-      name: image
-      displayName: Pool Image
+stages:
+- stage: Build
+  displayName: Build
+  jobs:
+  - job: Build
+    steps:
+    - script: echo running Build
+
+
+- stage: UnitTest
+  displayName: Unit Test
+  dependsOn: Build
+  jobs:
+  - job: UnitTest
+    steps:
+    - script: echo running UnitTest
+
+
+- ${{ if eq(parameters.name, true) }}:
+  - stage: PerfTest
+    displayName: Performance Test
+    dependsOn: Build
+    jobs:
+    - job: PerfTest
+      steps:
+      - script: echo running PerfTestt
  
 - name: configs
   type: string
