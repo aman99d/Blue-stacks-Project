@@ -2,8 +2,8 @@ trigger:
 - none
 
 steps:
-#- script: echo ${{parameters.displayName}}
-#  displayName: 'Run a one-line script'
+- script: echo ${{parameters.Environemt_selection}}
+  displayName: 'Run a one-line script'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
@@ -14,7 +14,7 @@ variables:
   value: testlocal
 
 parameters:
-- name: Environemt selection
+- name: Environemt_selection
   type: string
   default: testenv
   values:
