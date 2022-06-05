@@ -32,12 +32,8 @@ parameters:
   type: boolean
   default: false
   - ${{ if eq(parameters.runPerfTests, true) }}:
-      name: PerfTest
-      displayName: Performance Test
-      jobs:
-      - job: PerfTest
-        steps:
-        - script: echo running PerfTest
+      name: image
+      displayName: Pool Image
  
 - name: configs
   type: string
