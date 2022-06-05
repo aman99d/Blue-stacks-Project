@@ -31,21 +31,30 @@ parameters:
   displayName: Include Accessibility checks
   type: boolean
   default: false
+- ${{ if eq(parameters.runPerfTests, true) }}:
+  - name: PerfTest
+    displayName: Performance Test
+    jobs:
+    - job: PerfTest
+      steps:
+      - script: echo running PerfTest
  
 - name: configs
   type: string
-  default: 'x86,x64'
+  default: 'Desktop,Mobile'
 
 jobs:
-- ${{ if contains(parameters.configs, 'x86') }}:
-  - job: x86
+- ${{ if contains(parameters.configs, 'Desktop') }}:
+  - job: Desktop
     steps:
-    - script: echo Building x86...
-- ${{ if contains(parameters.configs, 'x64') }}:
-  - job: x64
+    - script: Accessibility testing on Desktop...
+- ${{ if contains(parameters.configs, 'Mobile') }}:
+  - job: Mobile
     steps:
-    - script: echo Building x64...
+    - script: Accessibility testing on Mobile...
 - ${{ if contains(parameters.configs, 'arm') }}:
   - job: arm
     steps:
     - script: echo Building arm...
+
+
