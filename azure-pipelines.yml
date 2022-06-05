@@ -15,7 +15,8 @@ steps:
   displayName: 'Run a multi-line script'
 
 variables:
-- none
+- name: environment
+  value: testlocal
 
 parameters:
   - name: resourceType
