@@ -37,22 +37,4 @@ parameters:
   - 3
   - 4
 
-- name: configs
-  type: string
-  default: 'Desktop,Mobile'
-
-jobs:
-- ${{ if contains(parameters.configs, 'Desktop') }}:
-  - job: Desktop
-    steps:
-    - script: Accessibility testing on Desktop...
-- ${{ if contains(parameters.configs, 'Mobile') }}:
-  - job: Mobile
-    steps:
-    - script: Accessibility testing on Mobile...
-- ${{ if contains(parameters.configs, 'arm') }}:
-  - job: arm
-    steps:
-    - script: echo Building arm...
-
 
