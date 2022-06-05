@@ -7,7 +7,7 @@ trigger:
 - none
 
 steps:
-- script: echo ${{parameters.resourceType}}
+- script: echo ${{parameters.displayName}}
   displayName: 'Run a one-line script'
 
 - script: |
